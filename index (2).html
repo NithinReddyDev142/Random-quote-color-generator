@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh Chaturthi Wishes</title>
+  
+</head>
+<body>
+
+    <script>
+    
+        let container = document.createElement("div");
+        document.body.appendChild(container);
+        container.style.width = "300px";
+        container.style.margin = "50px auto";
+        container.style.backgroundColor = "white";
+        container.style.border = "2px solid black";
+        container.style.borderRadius = "15px";
+        container.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+        container.style.padding = "20px";
+        container.style.textAlign = "center";
+
+        let header = document.createElement("h1");
+        header.innerHTML = "Hyderabad <span style='font-weight: normal;'>Ganesh Mandapam</span>";
+        container.appendChild(header);
+        header.style.fontSize = "1.5rem";
+        header.style.color = "green";
+        header.style.marginBottom = "5px";
+
+        let subHeader = document.createElement("h2");
+        subHeader.innerHTML = "KPHB";
+        container.appendChild(subHeader);
+        subHeader.style.fontSize = "1rem";
+        subHeader.style.color = "#333";
+        subHeader.style.marginBottom = "20px";
+
+     
+        let greeting = document.createElement("div");
+        container.appendChild(greeting);
+
+        let greetingTitle = document.createElement("h3");
+        greetingTitle.innerHTML = "Happy <span style='font-weight: bold; color: #d6336c;'>Ganesh</span> Chaturthi";
+        greeting.appendChild(greetingTitle);
+        greetingTitle.style.fontSize = "1.2rem";
+        greetingTitle.style.color = "#d6336c";
+        greetingTitle.style.marginBottom = "10px";
+
+        let greetingText = document.createElement("p");
+        greetingText.innerHTML = "On this occasion of Ganesh Chaturthi, We wish Lord Ganpati visits your home with bags full of happiness, prosperity, and peace.";
+        greeting.appendChild(greetingText);
+        greetingText.style.fontSize = "0.9rem";
+        greetingText.style.color = "#555";
+        greetingText.style.marginBottom = "20px";
+
+        let ganeshaImage = document.createElement("img");
+        ganeshaImage.setAttribute("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRojIVOT6p7GKMWfR2DdM0-9BXqA_hpT_tQXQ&s"); // Change this to your local path if needed
+        container.appendChild(ganeshaImage);
+        ganeshaImage.style.width = "100%";
+        ganeshaImage.style.borderRadius = "10px";
+        ganeshaImage.style.marginBottom = "20px";
+
+     
+        let footer = document.createElement("div");
+        container.appendChild(footer);
+        footer.style.backgroundColor = "#f95d9b";
+        footer.style.color = "white";
+        footer.style.padding = "10px";
+        footer.style.borderRadius = "10px";
+        footer.style.fontSize = "0.8rem";
+        footer.style.boxShadow="0px,0px,20px"
+
+        let address = document.createElement("address");
+        address.innerHTML = "Nexus mall, JNTU College, Opposite vistara Kitchen, Hi-tech city road, TS-250002";
+        footer.appendChild(address);
+
+        let contact = document.createElement("p");
+        contact.innerHTML = "+91-868892903 | +91-8845690245 |";
+        footer.appendChild(contact);
+    </script>
+
+</body>
+</html>

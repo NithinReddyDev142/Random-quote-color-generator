@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random  Color Generator</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+    
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        #quotes {
+            font-size: 24px; 
+            font-weight: bold; 
+            margin-top: 20px; 
+            text-align: center; 
+        }
+
+        #colorCode {
+            font-size: 18px; 
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+    </style>
+</head>
+ <body>
+    <div id="colorCode"></div>  
+    <div id="quotes"></div>
+    <button id="btn">Click me</button>
+
+    <script>
+         color = () => {
+            let hexNumbers = "0123456789ABCDEF";
+            let hexColorCode = "#"
+
+            for (let i = 0; i < 6; i++) {
+                hexColorCode += hexNumbers[Math.floor(Math.random() * 14)];
+            }
+
+            return hexColorCode;
+        }
+        const quotes = [
+            "The best way to get started is to quit talking and begin doing. - Walt Disney",
+            "The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty. - Winston Churchill",
+            "Don't let yesterday take up too much of today. - Will Rogers",
+            "You learn more from failure than from success. Don't let it stop you. Failure builds character. - Unknown",
+            "It's not whether you get knocked down, it's whether you get up. - Vince Lombardi",
+            
+        ];
+        const randomQuote = () => {
+            let res = '';
+            for (let i = 0; i < quotes.length; i++) { 
+                let Index = Math.floor(Math.random() * quotes.length);
+                res = quotes[Index];
+            }
+            return res;
+        };
+
+            let btn = document.getElementById("btn");
+            btn.addEventListener("click", () => {
+            document.body.style.backgroundColor = color();
+            document.getElementById("colorCode").innerHTML = color();
+
+
+
+            document.getElementById("quotes").innerHTML = randomQuote();
+        });
+    </script>
+</body>
+</html>
